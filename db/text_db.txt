@@ -1,52 +1,52 @@
-|p1|||lead_switch|Beedrill, F|0|0|0|0|0
-|p2||Beedrill, F|lead_switch|Zapdos|0|0|0|0|0
-1|p1|Beedrill, F|Zapdos|move|Poison Jab|0|0|0|0|0
-1|p2|Zapdos|Beedrill, F|move|Heat Wave|0|0|0|0|0
-1|p1|Beedrill, F|Zapdos|faint_switch|Tapu Lele|0|0|0|0|0
-2|p2|Zapdos|Tapu Lele|switch|Incineroar, F|0|0|0|0|0
-2|p1|Tapu Lele|Incineroar, F|move|Moonblast|-1|0|0|0|0
-3|p1|Tapu Lele|Incineroar, F|move|Moonblast|-1|0|0|0|0
-3|p2|Incineroar, F|Tapu Lele|move|U-turn|0|0|-2|0|0
-3|p2|Incineroar, F|Tapu Lele|switch|Venusaur, F|0|0|0|0|0
-4|p1|Tapu Lele|Venusaur, F|switch|Garchomp, M|0|0|0|0|0
-4|p2|Venusaur, F|Garchomp, M|move|Leech Seed|0|0|0|0|0
-5|p1|Garchomp, M|Venusaur, F|switch|Tapu Lele|0|0|0|0|0
-5|p2|Venusaur, F|Tapu Lele|switch|Zapdos|0|0|0|0|0
-6|p1|Tapu Lele|Zapdos|move|Moonblast|0|0|0|0|0
-6|p2|Zapdos|Tapu Lele|faint_switch|Volcarona, M|0|0|0|0|0
-7|p1|Tapu Lele|Volcarona, M|switch|Keldeo-Resolute|0|0|0|0|0
-7|p2|Volcarona, M|Keldeo-Resolute|move|Fiery Dance|0|0|0|0|0
-8|p1|Keldeo-Resolute|Volcarona, M|move|Stone Edge|0|0|0|0|0
-8|p2|Volcarona, M|Keldeo-Resolute|move|Giga Drain|0|0|1|0|0
-8|p1|Keldeo-Resolute|Volcarona, M|faint_switch|Tornadus-Therian, M|0|0|0|0|0
-9|p1|Tornadus-Therian, M|Volcarona, M|move|Supersonic Skystrike|0|0|0|0|0
-9|p2|Volcarona, M|Tornadus-Therian, M|faint_switch|Celesteela|0|0|0|0|0
-10|p1|Tornadus-Therian, M|Celesteela|move|Knock Off|0|0|0|0|0
-10|p2|Celesteela|Tornadus-Therian, M|move|Flamethrower|0|0|0|0|0
-11|p1|Tornadus-Therian, M|Celesteela|move|U-turn|0|0|0|0|0
-11|p1|Tornadus-Therian, M|Celesteela|switch|Magnezone|0|0|0|0|0
-11|p2|Celesteela|Magnezone|move|Autotomize|0|0|0|0|0
-12|p2|Celesteela|Magnezone|move|Flamethrower|0|0|0|0|2
-12|p1|Magnezone|Celesteela|move|Thunderbolt|0|0|0|0|0
-12|p2|Celesteela|Magnezone|faint_switch|Kartana|0|0|0|0|0
-13|p2|Kartana|Magnezone|move|Knock Off|0|0|0|0|0
-13|p1|Magnezone|Kartana|move|Hidden Power|0|0|0|0|0
-13|p2|Kartana|Magnezone|faint_switch|Venusaur-Mega, F|0|0|0|0|0
-14|p2|Venusaur-Mega, F|Magnezone|move|Giga Drain|0|0|0|0|0
-14|p1|Magnezone|Venusaur-Mega, F|faint_switch|Garchomp, M|0|0|0|0|0
-15|p1|Garchomp, M|Venusaur-Mega, F|move|Stealth Rock|0|0|0|0|0
-15|p2|Venusaur-Mega, F|Garchomp, M|move|Leech Seed|0|0|0|0|0
-16|p1|Garchomp, M|Venusaur-Mega, F|switch|Tornadus-Therian, M|0|0|0|0|0
-16|p2|Venusaur-Mega, F|Tornadus-Therian, M|move|Giga Drain|0|0|0|0|0
-17|p1|Tornadus-Therian, M|Venusaur-Mega, F|move|Hurricane|0|0|0|0|0
-17|p2|Venusaur-Mega, F|Tornadus-Therian, M|move|Sludge Bomb|0|0|0|0|0
-18|p1|Tornadus-Therian, M|Venusaur-Mega, F|move|U-turn|0|0|0|0|0
-18|p1|Tornadus-Therian, M|Venusaur-Mega, F|switch|Garchomp, M|0|0|0|0|0
-18|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0
-19|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0
-19|p1|Garchomp, M|Venusaur-Mega, F|move|Roar|0|0|0|0|0
-19|p2|Venusaur-Mega, F|Garchomp, M|faint_switch|Venusaur-Mega, F|0|0|0|0|0
-20|p1|Garchomp, M|Venusaur-Mega, F|move|Earthquake|0|0|0|0|0
-20|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0
-20|p1|Garchomp, M|Venusaur-Mega, F|faint_switch|Tapu Lele|0|0|0|0|0
-21|p1|Tapu Lele|Venusaur-Mega, F|move|Psychic|0|0|0|0|0
+|p1|||lead_switch|Beedrill, F|0|0|0|0|0|
+|p2||Beedrill, F|lead_switch|Zapdos|0|0|0|0|0|
+1|p1|Beedrill, F|Zapdos|move|Poison Jab|0|0|0|0|0|
+1|p2|Zapdos|Beedrill, F|move|Heat Wave|0|0|0|0|0|
+1|p1|Beedrill, F|Zapdos|faint_switch|Tapu Lele|0|0|0|0|0|
+2|p2|Zapdos|Tapu Lele|switch|Incineroar, F|0|0|0|0|0|
+2|p1|Tapu Lele|Incineroar, F|move|Moonblast|-1|0|0|0|0|
+3|p1|Tapu Lele|Incineroar, F|move|Moonblast|-1|0|0|0|0|
+3|p2|Incineroar, F|Tapu Lele|move|U-turn|0|0|-2|0|0|
+3|p2|Incineroar, F|Tapu Lele|move_switch|Venusaur, F|0|0|0|0|0|
+4|p1|Tapu Lele|Venusaur, F|switch|Garchomp, M|0|0|0|0|0|
+4|p2|Venusaur, F|Garchomp, M|move|Leech Seed|0|0|0|0|0|
+5|p1|Garchomp, M|Venusaur, F|switch|Tapu Lele|0|0|0|0|0|
+5|p2|Venusaur, F|Tapu Lele|switch|Zapdos|0|0|0|0|0|
+6|p1|Tapu Lele|Zapdos|move|Moonblast|0|0|0|0|0|
+6|p2|Zapdos|Tapu Lele|faint_switch|Volcarona, M|0|0|0|0|0|
+7|p1|Tapu Lele|Volcarona, M|switch|Keldeo-Resolute|0|0|0|0|0|
+7|p2|Volcarona, M|Keldeo-Resolute|move|Fiery Dance|0|0|0|0|0|
+8|p1|Keldeo-Resolute|Volcarona, M|move|Stone Edge|0|0|0|0|0|
+8|p2|Volcarona, M|Keldeo-Resolute|move|Giga Drain|0|0|1|0|0|
+8|p1|Keldeo-Resolute|Volcarona, M|faint_switch|Tornadus-Therian, M|0|0|0|0|0|
+9|p1|Tornadus-Therian, M|Volcarona, M|move|Supersonic Skystrike|0|0|0|0|0|
+9|p2|Volcarona, M|Tornadus-Therian, M|faint_switch|Celesteela|0|0|0|0|0|
+10|p1|Tornadus-Therian, M|Celesteela|move|Knock Off|0|0|0|0|0|
+10|p2|Celesteela|Tornadus-Therian, M|move|Flamethrower|0|0|0|0|0|
+11|p1|Tornadus-Therian, M|Celesteela|move|U-turn|0|0|0|0|0|brn
+11|p1|Tornadus-Therian, M|Celesteela|move_switch|Magnezone|0|0|0|0|0|brn
+11|p2|Celesteela|Magnezone|move|Autotomize|0|0|0|0|0|
+12|p2|Celesteela|Magnezone|move|Flamethrower|0|0|0|0|2|
+12|p1|Magnezone|Celesteela|move|Thunderbolt|0|0|0|0|0|brn
+12|p2|Celesteela|Magnezone|faint_switch|Kartana|0|0|0|0|0|
+13|p2|Kartana|Magnezone|move|Knock Off|0|0|0|0|0|
+13|p1|Magnezone|Kartana|move|Hidden Power|0|0|0|0|0|brn
+13|p2|Kartana|Magnezone|faint_switch|Venusaur-Mega, F|0|0|0|0|0|
+14|p2|Venusaur-Mega, F|Magnezone|move|Giga Drain|0|0|0|0|0|
+14|p1|Magnezone|Venusaur-Mega, F|faint_switch|Garchomp, M|0|0|0|0|0|brn
+15|p1|Garchomp, M|Venusaur-Mega, F|move|Stealth Rock|0|0|0|0|0|brn
+15|p2|Venusaur-Mega, F|Garchomp, M|move|Leech Seed|0|0|0|0|0|
+16|p1|Garchomp, M|Venusaur-Mega, F|switch|Tornadus-Therian, M|0|0|0|0|0|brn
+16|p2|Venusaur-Mega, F|Tornadus-Therian, M|move|Giga Drain|0|0|0|0|0|
+17|p1|Tornadus-Therian, M|Venusaur-Mega, F|move|Hurricane|0|0|0|0|0|brn
+17|p2|Venusaur-Mega, F|Tornadus-Therian, M|move|Sludge Bomb|0|0|0|0|0|
+18|p1|Tornadus-Therian, M|Venusaur-Mega, F|move|U-turn|0|0|0|0|0|brn
+18|p1|Tornadus-Therian, M|Venusaur-Mega, F|move_switch|Garchomp, M|0|0|0|0|0|brn
+18|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0|
+19|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0|
+19|p1|Garchomp, M|Venusaur-Mega, F|move|Roar|0|0|0|0|0|brn
+19|p2|Venusaur-Mega, F|Garchomp, M|faint_switch|Venusaur-Mega, F|0|0|0|0|0|
+20|p1|Garchomp, M|Venusaur-Mega, F|move|Earthquake|0|0|0|0|0|brn
+20|p2|Venusaur-Mega, F|Garchomp, M|move|Giga Drain|0|0|0|0|0|
+20|p1|Garchomp, M|Venusaur-Mega, F|faint_switch|Tapu Lele|0|0|0|0|0|brn
+21|p1|Tapu Lele|Venusaur-Mega, F|move|Psychic|0|0|0|0|0|brn

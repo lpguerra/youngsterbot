@@ -37,50 +37,65 @@ class Reader:
         elif re.match(r'\|poke\|p2', log_line):
             battle.assign_poke(2, line_info[3])
 
+        # PLAYER 1 STATUS AND STATUS HEALS
+
+        elif re.match(r'\|-status\|p1', log_line):    # status infliction
+            battle.change_status(line_info[3], 'p1')
+            print(line_info[3])
+        elif re.match(r'\|-heal\|p1', log_line):    # attack boost
+            pass
+
+        # PLAYER 2 STATUS AND STATUS HEALS
+
+        elif re.match(r'\|-status\|p2', log_line):    # attack boost
+            battle.change_status(line_info[3], 'p2')
+        elif re.match(r'\|-heal\|p1.*', log_line):
+            pass
+
         # PLAYER 1 BOOSTS
         elif re.match(r'\|-boost\|p1.*\|atk\|', log_line):    # attack boost
-            battle.p1_boosts.boost('atk', int(line_info[4]))
+            battle.p1_boosts.boost('attack', int(line_info[4]))
         elif re.match(r'\|-unboost\|p1.*\|atk\|', log_line):  # attack unboost
-            battle.p1_boosts.unboost('atk', int(line_info[4]))
+            battle.p1_boosts.unboost('attack', int(line_info[4]))
         elif re.match(r'\|-boost\|p1.*\|def\|', log_line):    # defense boost
-            battle.p1_boosts.boost('def', int(line_info[4]))
+            battle.p1_boosts.boost('defense', int(line_info[4]))
         elif re.match(r'\|-unboost\|p1.*\|def\|', log_line):  # defense unboost
-            battle.p1_boosts.unboost('def', int(line_info[4]))
+            battle.p1_boosts.unboost('defense', int(line_info[4]))
         elif re.match(r'\|-boost\|p1.*\|spa\|', log_line):    # special attack boost
-            battle.p1_boosts.boost('spa', int(line_info[4]))
+            battle.p1_boosts.boost('specialAttack', int(line_info[4]))
         elif re.match(r'\|-unboost\|p1.*\|spa\|', log_line):  # special attack unboost
-            battle.p1_boosts.unboost('spa', int(line_info[4]))
+            battle.p1_boosts.unboost('specialAttack', int(line_info[4]))
         elif re.match(r'\|-boost\|p1.*\|spd\|', log_line):    # special defense boost
-            battle.p1_boosts.boost('spd', int(line_info[4]))
+            battle.p1_boosts.boost('specialDefense', int(line_info[4]))
         elif re.match(r'\|-unboost\|p1.*\|spd\|', log_line):  # special defense unboost
-            battle.p1_boosts.unboost('spd', int(line_info[4]))
+            battle.p1_boosts.unboost('specialDefense', int(line_info[4]))
         elif re.match(r'\|-boost\|p1.*\|spe\|', log_line):    # speed boost
-            battle.p1_boosts.boost('spe', int(line_info[4]))
+            battle.p1_boosts.boost('speed', int(line_info[4]))
         elif re.match(r'\|-unboost\|p1.*\|spe\|', log_line):  # speed unboost
-            battle.p1_boosts.unboost('spe', int(line_info[4]))
+            battle.p1_boosts.unboost('speed', int(line_info[4]))
 
     # PLAYER 2 BOOSTS
 
         elif re.match(r'\|-boost\|p2.*\|atk\|', log_line):      # attack boost
-            battle.p2_boosts.boost('atk', int(line_info[4]))
+            battle.p2_boosts.boost('attack', int(line_info[4]))
         elif re.match(r'\|-unboost\|p2.*\|atk\|', log_line):    # attack unboost
-            battle.p2_boosts.unboost('atk', int(line_info[4]))
+            battle.p2_boosts.unboost('attack', int(line_info[4]))
         elif re.match(r'\|-boost\|p2.*\|def\|', log_line):      # defense boost
-            battle.p2_boosts.boost('def', int(line_info[4]))
+            battle.p2_boosts.boost('defense', int(line_info[4]))
         elif re.match(r'\|-unboost\|p2.*\|def\|', log_line):    # defense unboost
-            battle.p2_boosts.unboost('def', int(line_info[4]))
+            battle.p2_boosts.unboost('defense', int(line_info[4]))
         elif re.match(r'\|-boost\|p2.*\|spa\|', log_line):      # special attack boost
-            battle.p2_boosts.boost('spa', int(line_info[4]))
+            battle.p2_boosts.boost('specialAttack', int(line_info[4]))
         elif re.match(r'\|-unboost\|p2.*\|spa\|', log_line):    # special attack unboost
-            battle.p2_boosts.unboost('spa', int(line_info[4]))
+            battle.p2_boosts.unboost('specialAttack', int(line_info[4]))
         elif re.match(r'\|-boost\|p2.*\|spd\|', log_line):      # special defense boost
-            battle.p2_boosts.boost('spd', int(line_info[4]))
+            battle.p2_boosts.boost('specialDefense', int(line_info[4]))
         elif re.match(r'\|-unboost\|p2.*\|spd\|', log_line):    # special defense unboost
-            battle.p2_boosts.unboost('spd', int(line_info[4]))
+            battle.p2_boosts.unboost('specialDefense', int(line_info[4]))
         elif re.match(r'\|-boost\|p2.*\|spe\|', log_line):      # speed boost
-            battle.p2_boosts.boost('spe', int(line_info[4]))
+            battle.p2_boosts.boost('speed', int(line_info[4]))
         elif re.match(r'\|-unboost\|p2.*\|spe\|', log_line):    # speed unboost
-            battle.p2_boosts.unboost('spe', int(line_info[4]))
+            battle.p2_boosts.unboost('speed', int(line_info[4]))
 
 
 class Writer:
@@ -124,34 +139,41 @@ class Battle:
         self.p1_boosts = StatsBoost()
         self.p2_boosts = StatsBoost()
 
+        # status
+
+        self.p1_status = 'none'
+        self.p2_status = 'none'
+
     def assign_poke(self, player, poke):
         self.p1_team.append(poke) if player == 1 else self.p2_team.append(poke)
 
     def p1_switch(self, pokemon):
-        if self.current_turn and self.faint_flag_p1 is False:
-            self.p1_action = 'switch'
+
+        if self.pokemon_one == '':
+            self.p1_action = 'lead_switch'
         elif self.current_turn and self.faint_flag_p1 is True:
             self.p1_action = 'faint_switch'
             self.faint_flag_p1 = False
         elif self.u_turn_flag_p1 is True:
-            self.p1_action = 'voltturn_switch'
+            self.p1_action = 'move_switch'
         else:
-            self.p1_action = 'lead_switch'
+            self.p1_action = 'switch'
         self.description = pokemon
         self.p1_boosts.clear_boosts()
         self.battle_buffer += self.return_p1_snapshot()
         self.pokemon_one = pokemon
 
     def p2_switch(self, pokemon):
-        if self.current_turn and self.faint_flag_p2 is False:
-            self.p2_action = 'switch'
+
+        if self.pokemon_two == '':
+            self.p2_action = 'lead_switch'
         elif self.current_turn and self.faint_flag_p2 is True:
             self.p2_action = 'faint_switch'
             self.faint_flag_p2 = False
         elif self.u_turn_flag_p2 is True:
-            self.p2_action = 'voltturn_switch'
+            self.p2_action = 'move_switch'
         else:
-            self.p2_action = 'lead_switch'
+            self.p2_action = 'switch'
         self.description = pokemon
         self.p2_boosts.clear_boosts()
         self.battle_buffer += self.return_p2_snapshot()
@@ -175,7 +197,8 @@ class Battle:
                 '|' + str(self.p1_boosts.defense) + \
                 '|' + str(self.p1_boosts.specialAttack) + \
                 '|' + str(self.p1_boosts.specialDefense) + \
-                '|' + str(self.p1_boosts.speed) + '\n'
+                '|' + str(self.p1_boosts.speed) + \
+                '|' + self.p1_status + '\n'
 
     def return_p2_snapshot(self):
         return self.current_turn + '|p2|' + self.pokemon_two + '|' + self.pokemon_one + '|' + self.p2_action + '|' + self.description + \
@@ -183,7 +206,14 @@ class Battle:
                '|' + str(self.p2_boosts.defense) + \
                '|' + str(self.p2_boosts.specialAttack) + \
                '|' + str(self.p2_boosts.specialDefense) + \
-               '|' + str(self.p2_boosts.speed) + '\n'
+               '|' + str(self.p2_boosts.speed) + \
+               '|' + self.p2_status + '\n'
+
+    def change_status(self, status, player):
+        if player == 'p1':
+            self.p1_status = status
+        else:
+            self.p2_status = status
 
 
 class StatsBoost:
@@ -201,25 +231,7 @@ class StatsBoost:
         self.__dict__ = {attr: 0 for attr, value in self.__dict__.items()}
 
     def boost(self, stat, times):
-        if stat == 'atk':
-            self.attack += times
-        elif stat == 'def':
-            self.defense += times
-        elif stat == 'spa':
-            self.specialAttack += times
-        elif stat == 'spd':
-            self.specialDefense += times
-        elif stat == 'spe':
-            self.speed += times
+        self.__dict__.update({stat: self.__dict__[stat] + times})
 
     def unboost(self, stat, times):
-        if stat == 'atk':
-            self.attack -= times
-        elif stat == 'def':
-            self.defense -= times
-        elif stat == 'spa':
-            self.specialAttack -= times
-        elif stat == 'spd':
-            self.specialDefense -= times
-        elif stat == 'spe':
-            self.speed -= times
+        self.__dict__.update({stat: self.__dict__[stat] - times})

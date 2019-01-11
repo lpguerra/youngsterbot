@@ -1,5 +1,7 @@
-import os
 from youngster_lib import *
+
+arq = open("C:\\Users\\User\\Documents\\Leonardo Guerra\\youngsterbot\\db\\text_db.txt", "w+")
+arq.close()
 
 
 reader = Reader()
